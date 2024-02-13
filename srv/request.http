@@ -1,0 +1,29 @@
+GET http://localhost:4004/odata/v4/catalog/$metadata HTTP/1.1
+
+###
+
+GET http://localhost:4004/odata/v4/catalog/Books HTTP/1.1
+
+###
+
+POST http://localhost:4004/odata/v4/catalog/Books HTTP/1.1
+Content-Type: application/json
+
+    {
+      "ID": 3,
+      "title": "Black Panther",
+      "stock": 700
+    }
+
+###
+
+PATCH  http://localhost:4004/odata/v4/catalog/Books(ID=3) HTTP/1.1
+Content-Type: application/json
+
+    {
+      "stock": 600
+    }
+
+
+
+
